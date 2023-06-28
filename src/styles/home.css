@@ -1,0 +1,23 @@
+.home {
+  position: relative;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (max-width: 768px) {
+  .home {
+    background-image: url('../../public/images/bg-img-home-mobile.jpg');
+  }
+}
+@media screen and (min-width: 768px){
+  .home {
+    background-image: url('../../public/images/bg-img-home.jpg');
+  }
+  
+}
+
+.botao_hover {
+  z-index: -1;
+  top: -40px;
+  left: -40px;
+}
