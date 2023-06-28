@@ -15,9 +15,6 @@ module.exports = {
         branco: "#FFFFFF",
         cinza: "#979797",
         text: "#D0D6F9",
-      },
-      keyframes: {
-        botao_hover: "",
       }
     },
   },
