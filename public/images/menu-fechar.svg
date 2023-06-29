@@ -1,6 +1,7 @@
-<svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Group">
-<rect id="Rectangle Copy" x="2.5752" y="0.954102" width="24" height="3" transform="rotate(45 2.5752 0.954102)" fill="#D0D6F9"/>
-<rect id="Rectangle Copy 3" x="0.454102" y="17.9246" width="24" height="3" transform="rotate(-45 0.454102 17.9246)" fill="#D0D6F9"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="px" height="px" viewBox="0 0 10 10" version="1.1">
+<g id="surface1">
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(81.568627%,83.921569%,97.647059%);fill-opacity:1;" d="M 1.289062 0.453125 L 9.773438 8.535156 L 8.710938 9.546875 L 0.226562 1.464844 Z M 1.289062 0.453125 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(81.568627%,83.921569%,97.647059%);fill-opacity:1;" d="M 0.226562 8.535156 L 8.710938 0.453125 L 9.773438 1.464844 L 1.289062 9.546875 Z M 0.226562 8.535156 "/>
 </g>
 </svg>

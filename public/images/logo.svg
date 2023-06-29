@@ -1,4 +1,7 @@
-<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="24" cy="24" r="24" fill="white"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M24 0C24 0 24 24 0 24C23.5776 24.1714 24 48 24 48C24 48 24 24 48 24C24 24 24 0 24 0Z" fill="#0B0D17"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48px" height="48px" viewBox="0 0 36 36" version="1.1">
+<g id="surface1">
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;" d="M 36 18 C 36 27.941406 27.941406 36 18 36 C 8.058594 36 0 27.941406 0 18 C 0 8.058594 8.058594 0 18 0 C 27.941406 0 36 8.058594 36 18 Z M 36 18 "/>
+<path style=" stroke:none;fill-rule:evenodd;fill:rgb(4.313725%,5.098039%,9.019608%);fill-opacity:1;" d="M 18 0 C 18 0 18 18 0 18 C 17.683594 18.128906 18 36 18 36 C 18 36 18 18 36 18 C 18 18 18 0 18 0 Z M 18 0 "/>
+</g>
 </svg>
