@@ -1,11 +1,19 @@
 import React, { useState } from 'react';
 import '../../styles/header.css';
 
-const Header = () => {
+const Header = (props) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [currentPage, setCurrentPage] = useState('Home');
 
+  // Verificador menu abre e fecha
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  // Verificador página atual
+  const handlePageChange = page => {
+    setCurrentPage(page);
+    props.onPageChange(page);
   };
 
   return (
@@ -13,7 +21,7 @@ const Header = () => {
       {/* Logo */}
       <img src="./images/logo.svg" alt="Space Tourism Logo" className="cursor-pointer md:pt-5" />
 
-      {/* Nav Bar Desktop */}
+      {/* Menu Icon & Nav Bar */}
       <input className="hidden" type="checkbox" name="menu" id="menu" />
       <label htmlFor="menu" onClick={toggleMenu}>
         {isOpen && (
@@ -27,22 +35,43 @@ const Header = () => {
       <ul
         id="menulist"
         className={`${isOpen ? 'flex' : 'hidden'} 
-        absolute z-10 top-0 right-0 md:top-5 h-screen md:h-24 md:flex flex-col md:flex-row gap-7 md:gap-10 bg-cinza/10 backdrop-blur-md text-branco md:pr-20 transition-all`}
+        absolute z-10 top-0 right-0 md:top-5 h-screen md:h-24 md:flex flex-col md:flex-row gap-7 md:gap-10 rounded-l-3xl md:rounded-l-full bg-cinza/10 backdrop-blur-md text-branco md:pr-20 transition-all`}
       >
         <li className="py-8">
           <div className="nav_line absolute bg-cinza/20 hidden xl:block h-0.5 w-9/12 -left-full translate-x-40 my-3"></div>
         </li>
-        <li className="cursor-pointer uppercase px-16 py-3 md:px-0 md:py-8 w-72 md:w-max hover:border-r-4 md:hover:border-r-0 md:hover:border-b-4">
-          <b className="mr-2">00</b> Home
+
+        <li
+          className={`menu_item cursor-pointer uppercase px-16 py-3 md:px-0 md:py-8 w-72 md:w-max hover:border-r-4 md:hover:border-r-0 md:hover:border-b-4 ${
+            currentPage === 'Home' ? 'border-r-4 md:border-r-0 md:border-b-4' : ''
+          }`}
+          onClick={() => handlePageChange('Home')}
+        >
+          <b className="mr-2 md:hidden lg:inline-block">00</b> Home
         </li>
-        <li className="cursor-pointer uppercase px-16 py-3 md:px-0 md:py-8 w-72 md:w-max hover:border-r-4 md:hover:border-r-0 md:hover:border-b-4">
-          <b className="mr-2">01</b> Destino
+        <li
+          className={`menu_item cursor-pointer uppercase px-16 py-3 md:px-0 md:py-8 w-72 md:w-max hover:border-r-4 md:hover:border-r-0 md:hover:border-b-4 ${
+            currentPage === 'Destino' ? 'border-r-4 md:border-r-0 md:border-b-4' : ''
+          }`}
+          onClick={() => handlePageChange('Destino')}
+        >
+          <b className="mr-2 md:hidden lg:inline-block">01</b> Destino
         </li>
-        <li className="cursor-pointer uppercase px-16 py-3 md:px-0 md:py-8 w-72 md:w-max hover:border-r-4 md:hover:border-r-0 md:hover:border-b-4">
-          <b className="mr-2">02</b> Tripulação
+        <li
+          className={`menu_item cursor-pointer uppercase px-16 py-3 md:px-0 md:py-8 w-72 md:w-max hover:border-r-4 md:hover:border-r-0 md:hover:border-b-4 ${
+            currentPage === 'Tripulação' ? 'border-r-4 md:border-r-0 md:border-b-4' : ''
+          }`}
+          onClick={() => handlePageChange('Tripulação')}
+        >
+          <b className="mr-2 md:hidden lg:inline-block">02</b> Tripulação
         </li>
-        <li className="cursor-pointer uppercase px-16 py-3 md:px-0 md:py-8 w-72 md:w-max hover:border-r-4 md:hover:border-r-0 md:hover:border-b-4">
-          <b className="mr-2">03</b> Tecnologia
+        <li
+          className={`menu_item cursor-pointer uppercase px-16 py-3 md:px-0 md:py-8 w-72 md:w-max hover:border-r-4 md:hover:border-r-0 md:hover:border-b-4 ${
+            currentPage === 'Tecnologia' ? 'border-r-4 md:border-r-0 md:border-b-4' : ''
+          }`}
+          onClick={() => handlePageChange('Tecnologia')}
+        >
+          <b className="mr-2 md:hidden lg:inline-block">03</b> Tecnologia
         </li>
       </ul>
     </header>
