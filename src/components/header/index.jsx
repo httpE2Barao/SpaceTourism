@@ -10,7 +10,7 @@ const Header = (props) => {
     setIsOpen(!isOpen);
   };
 
-  // Verificador página atual
+  // Setter página selecionada
   const handlePageChange = page => {
     setCurrentPage(page);
     props.onPageChange(page);
@@ -19,7 +19,7 @@ const Header = (props) => {
   return (
     <header className="relative flex items-center py-5 px-6 md:pl-10 justify-between">
       {/* Logo */}
-      <img src="./images/logo.svg" alt="Space Tourism Logo" className="cursor-pointer md:pt-5" />
+      <img onClick={() => handlePageChange('Home')} src="./images/logo.svg" alt="Space Tourism Logo" className="cursor-pointer md:pt-5" />
 
       {/* Menu Icon & Nav Bar */}
       <input className="hidden" type="checkbox" name="menu" id="menu" />

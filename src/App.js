@@ -10,26 +10,42 @@ const App = () => {
 
   const handlePageChange = page => {
     setCurrentPage(page);
-    console.log(page)
+  };
+
+  const getCSSClass = () => {
+    switch (currentPage) {
+      case 'Home':
+        return 'bg-image-home';
+      case 'Destino':
+        return 'bg-image-destino';
+      // case 'Tripulacao':
+      //   return 'bg-image-tripulacao';
+      // case 'Tecnologia':
+      //   return 'bg-image-tecnologia';
+      default:
+        return 'bg-image-home';
+    }
   };
 
   const renderPage = () => {
     switch (currentPage) {
       case 'Home':
-        return <Home />;
+        return <Home handlePageChange={handlePageChange} />;
       case 'Destino':
-        return <Destino />;
+        return <>
+          <Destino />;
+        </>
       // case 'Tripulacao':
       //   return <Tripulacao />;
       // case 'Tecnologia':
       //   return <Tecnologia />;
       default:
-        return <Home />;
+        return <Home handlePageChange={handlePageChange} />;
     }
   };
 
   return (
-    <div className="App">
+    <div className={`App ${getCSSClass()}`}>
       <Header onPageChange={handlePageChange} />
       {renderPage()}
     </div>

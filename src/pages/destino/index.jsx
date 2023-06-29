@@ -21,13 +21,9 @@ const Destino = () => {
           className="w-1/2"
         />
         <DestinoLista 
-          selected={currentOrb} // Passa o estado atual como prop para DestinoLista
-          onOrbChange={handleOrbChange} // Passa a função handleOrbChange como prop para DestinoLista
+          selected={currentOrb}
+          onOrbChange={handleOrbChange}
         />
-      </section>
-
-      <section className="">
-        <h2></h2> {/* Exibe a informação do destino selecionado */}
       </section>
     </article>
   )

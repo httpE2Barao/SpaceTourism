@@ -2,21 +2,6 @@
   position: relative;
   z-index: 1;
 }
-.App {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-@media screen and (max-width: 768px) {
-  .App {
-    background-image: url('../../public/images/bg-img-home-mobile.jpg');
-  }
-}
-@media screen and (min-width: 768px){
-  .App {
-    background-image: url('../../public/images/bg-img-home.jpg');
-  }
-}
 .botao_hover {
   z-index: -1;
   top: -40px;
