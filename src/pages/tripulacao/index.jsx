@@ -36,7 +36,7 @@ const Tripulacao = () => {
           </h2>
         </div>
 
-        <img src={`./images/grupo_${currentOne}.png`} alt="Foto dele(a)" className="w-96" />
+        <img src={`./images/grupo_${currentOne}.png`} alt="Foto dele(a)" className="w-10/12" />
 
         <ul className="flex items-center gap-8">
           {tripulacao.map((pessoa, index) => (
