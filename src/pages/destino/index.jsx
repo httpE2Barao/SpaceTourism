@@ -11,19 +11,23 @@ const Destino = () => {
   return (
     <article className="destino text-branco">
       <section className="font-secondary 
-        flex flex-col items-center tracking-wider
-        h-full p-4 gap-6
+        flex flex-col md:flex-row items-center tracking-wider
+        h-full p-4 gap-6 md:gap-0 md:my-auto
         ">
-        <h2 className="uppercase text-lg">
-          <aside className="mr-2 inline text-cinza">01</aside>
-           Escolha o seu destino</h2>
-        <img src={`./images/orb_${currentOrb}.svg`} alt={currentOrb}
-          className="w-1/2"
-        />
-        <DestinoLista 
-          selected={currentOrb}
-          onOrbChange={handleOrbChange}
-        />
+        <div className="flex flex-col items-center md:mb-auto md:mt-8 md:pl-8 gap-6 md:w-2/5">
+          <h2 className="uppercase text-xl md:mr-auto md:mb-6">
+            <aside className="mr-2 inline text-cinza">01</aside>
+            Escolha o seu destino</h2>
+          <img src={`./images/orb_${currentOrb}.svg`} alt={currentOrb}
+            className="w-72 md:w-80"
+          />
+        </div>
+        <div className="flex flex-col items-center md:items-start gap-6 md:gap-0 md:w-3/5">
+          <DestinoLista
+            selected={currentOrb}
+            onOrbChange={handleOrbChange}
+          />
+        </div>
       </section>
     </article>
   )
