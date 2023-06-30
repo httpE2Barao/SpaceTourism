@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import '../../styles/header.css';
 
-const Header = (props) => {
+const Header = ({ currentPage, onPageChange }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [currentPage, setCurrentPage] = useState('Home');
 
   // Verificador menu abre e fecha
   const toggleMenu = () => {
@@ -12,8 +11,7 @@ const Header = (props) => {
 
   // Setter página selecionada
   const handlePageChange = page => {
-    setCurrentPage(page);
-    props.onPageChange(page);
+    onPageChange(page);
   };
 
   return (

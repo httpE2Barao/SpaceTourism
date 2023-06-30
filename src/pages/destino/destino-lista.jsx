@@ -16,7 +16,8 @@ const DestinoLista = ({ selected, onOrbChange }) => {
           </li>
         ))}
       </ul>
-      <section className='flex flex-col items-center text-center md:items-start md:p-6 md:gap-4'>
+      <section className='flex flex-col items-center text-center 
+        md:items-start md:p-6 md:gap-4 md:pr-10'>
         {selected === 'Lua' &&
           <>
             <h2 className='font-main text-7xl uppercase'>Lua</h2>

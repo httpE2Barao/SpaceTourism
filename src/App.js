@@ -32,9 +32,7 @@ const App = () => {
       case 'Home':
         return <Home handlePageChange={handlePageChange} />;
       case 'Destino':
-        return <>
-          <Destino />;
-        </>
+        return <Destino />;
       // case 'Tripulacao':
       //   return <Tripulacao />;
       // case 'Tecnologia':
@@ -46,7 +44,7 @@ const App = () => {
 
   return (
     <div className={`App ${getCSSClass()}`}>
-      <Header onPageChange={handlePageChange} />
+      <Header currentPage={currentPage} onPageChange={handlePageChange} />
       {renderPage()}
     </div>
   );
