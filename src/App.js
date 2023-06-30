@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Home from './pages/home';
 import Header from './components/header';
 import Destino from './pages/destino';
+import Tripulacao from './pages/tripulacao';
 // import Tripulacao from './pages/Tripulacao';
 // import Tecnologia from './pages/Tecnologia';
 
@@ -18,10 +19,10 @@ const App = () => {
         return 'bg-image-home';
       case 'Destino':
         return 'bg-image-destino';
-      // case 'Tripulacao':
-      //   return 'bg-image-tripulacao';
-      // case 'Tecnologia':
-      //   return 'bg-image-tecnologia';
+      case 'Tripulação':
+        return 'bg-image-tripulacao';
+      case 'Tecnologia':
+        return 'bg-image-tecnologia';
       default:
         return 'bg-image-home';
     }
@@ -33,8 +34,8 @@ const App = () => {
         return <Home handlePageChange={handlePageChange} />;
       case 'Destino':
         return <Destino />;
-      // case 'Tripulacao':
-      //   return <Tripulacao />;
+      case 'Tripulação':
+        return <Tripulacao />;
       // case 'Tecnologia':
       //   return <Tecnologia />;
       default:

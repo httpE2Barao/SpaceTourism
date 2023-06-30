@@ -29,6 +29,12 @@ body {
   .bg-image-destino {
     background-image: url('../public/images/bg-img-destino-mobile.jpg');
   }
+  .bg-image-tripulacao {
+    background-image: url('../public/images/bg-img-tripulacao.jpg');
+  }
+  .bg-image-tecnologia {
+    background-image: url('../public/images/bg-img-tecnologia.jpg');
+  }
 }
 /* Desktop */
 @media screen and (min-width: 768px){
@@ -37,5 +43,11 @@ body {
   }
   .bg-image-destino {
     background-image: url('../public/images/bg-img-destino.jpg');
+  }
+  .bg-image-tripulacao {
+    background-image: url('../public/images/bg-img-tripulacao.jpg');
+  }
+  .bg-image-tecnologia {
+    background-image: url('../public/images/bg-img-tecnologia.jpg');
   }
 }

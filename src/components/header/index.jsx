@@ -30,7 +30,7 @@ const Header = ({ currentPage, onPageChange }) => {
         )}
       </label>
 
-      <ul
+<ul
         id="menulist"
         className={`${isOpen ? 'flex' : 'hidden'} 
         absolute z-10 top-0 right-0 md:top-5 h-screen md:h-24 md:flex flex-col md:flex-row gap-7 md:gap-10 rounded-l-3xl md:rounded-l-full bg-cinza/10 backdrop-blur-md text-branco md:pr-20 transition-all`}

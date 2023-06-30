@@ -9,12 +9,11 @@ const Destino = () => {
   }
 
   return (
-    <article className="destino text-branco">
-      <section className="font-secondary 
+      <section className="font-secondary text-branco
         flex flex-col md:flex-row items-center tracking-wider
         h-full p-4 gap-6 md:gap-0 md:my-auto
         ">
-        <div className="flex flex-col items-center md:mb-auto md:mt-8 md:pl-8 gap-6 md:w-2/5">
+        <div className="flex flex-col items-center tracking-widest md:mb-auto md:mt-8 md:pl-8 gap-6 md:w-2/5">
           <h2 className="uppercase text-xl md:mr-auto md:mb-6">
             <aside className="mr-2 inline text-cinza">01</aside>
             Escolha o seu destino</h2>
@@ -29,7 +28,6 @@ const Destino = () => {
           />
         </div>
       </section>
-    </article>
   )
 }
 
