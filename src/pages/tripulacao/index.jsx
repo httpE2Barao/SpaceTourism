@@ -48,7 +48,7 @@ const Tripulacao = () => {
             </li>
           ))}
         </ul>
-        <div className="tracking-wider text-center mb-6">
+        <div className="tracking-wider text-center mb-6 mx-5">
           <h3 className="font-main text-cinza font-semibold uppercase text-lg">
             {currentOne}
           </h3>
@@ -68,7 +68,7 @@ const Tripulacao = () => {
               <h2 className="font-main uppercase text-3xl">
                 Mark Shuttleworth
               </h2>
-              <p className="py-6 px-4 text-lg">
+              <p className="py-6 text-lg">
                 Mark Richard Shuttleworth é o fundador e CEO da Canonical, a empresa responsável pelo sistema operacional Ubuntu, baseado em Linux. Ele conquistou o feito de se tornar o primeiro sul-africano a viajar para o espaço como turista espacial.
               </p>
             </>
