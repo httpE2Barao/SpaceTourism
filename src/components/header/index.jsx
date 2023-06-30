@@ -43,7 +43,10 @@ const Header = ({ currentPage, onPageChange }) => {
           className={`menu_item cursor-pointer uppercase px-16 py-3 md:px-0 md:py-8 w-72 md:w-max hover:border-r-4 md:hover:border-r-0 md:hover:border-b-4 ${
             currentPage === 'Home' ? 'border-r-4 md:border-r-0 md:border-b-4' : ''
           }`}
-          onClick={() => handlePageChange('Home')}
+          onClick={() => {
+            handlePageChange('Home')
+            toggleMenu()
+          }} 
         >
           <b className="mr-2 md:hidden lg:inline-block">00</b> Home
         </li>
@@ -51,7 +54,10 @@ const Header = ({ currentPage, onPageChange }) => {
           className={`menu_item cursor-pointer uppercase px-16 py-3 md:px-0 md:py-8 w-72 md:w-max hover:border-r-4 md:hover:border-r-0 md:hover:border-b-4 ${
             currentPage === 'Destino' ? 'border-r-4 md:border-r-0 md:border-b-4' : ''
           }`}
-          onClick={() => handlePageChange('Destino')}
+          onClick={() => {
+            handlePageChange('Destino')
+            toggleMenu()
+          }} 
         >
           <b className="mr-2 md:hidden lg:inline-block">01</b> Destino
         </li>
@@ -59,7 +65,10 @@ const Header = ({ currentPage, onPageChange }) => {
           className={`menu_item cursor-pointer uppercase px-16 py-3 md:px-0 md:py-8 w-72 md:w-max hover:border-r-4 md:hover:border-r-0 md:hover:border-b-4 ${
             currentPage === 'Tripulação' ? 'border-r-4 md:border-r-0 md:border-b-4' : ''
           }`}
-          onClick={() => handlePageChange('Tripulação')}
+          onClick={() => {
+            handlePageChange('Tripulação')
+            toggleMenu()
+          }} 
         >
           <b className="mr-2 md:hidden lg:inline-block">02</b> Tripulação
         </li>
@@ -67,7 +76,10 @@ const Header = ({ currentPage, onPageChange }) => {
           className={`menu_item cursor-pointer uppercase px-16 py-3 md:px-0 md:py-8 w-72 md:w-max hover:border-r-4 md:hover:border-r-0 md:hover:border-b-4 ${
             currentPage === 'Tecnologia' ? 'border-r-4 md:border-r-0 md:border-b-4' : ''
           }`}
-          onClick={() => handlePageChange('Tecnologia')}
+          onClick={() => {
+            handlePageChange('Tripulação')
+            toggleMenu()
+          }} 
         >
           <b className="mr-2 md:hidden lg:inline-block">03</b> Tecnologia
         </li>
