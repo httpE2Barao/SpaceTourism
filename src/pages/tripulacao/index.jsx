@@ -27,9 +27,9 @@ const Tripulacao = () => {
   }, [currentOne, isAutoSwitchEnabled, tripulacao]);
 
   const isMobile = window.matchMedia("(max-width: 767px)").matches;
-  const imageName = isMobile 
-  ? `grupo_${currentOne}-mobile.png` 
-  : `grupo_${currentOne}.png`;
+  const imageName = isMobile
+    ? `grupo_${currentOne}-mobile.png`
+    : `grupo_${currentOne}.png`;
 
   return (
     <>
@@ -45,10 +45,13 @@ const Tripulacao = () => {
           </h2>
         </div>
 
-        <img src={`./images/${imageName}`} alt="Foto dele(a)" 
-        className="foto_tripulante order-1 lg:self-end md:order-5 w-10/12 
-        md:w-96 md:mt-6 lg:absolute lg:bottom-0 lg:right-40
-        "/>
+        <img src={`./images/${imageName}`} alt="Foto dele(a)"
+          className={`${currentOne === 'Organizador' ? 'img_ajust' : ''} 
+          order-1 lg:self-end md:order-5 w-10/12 
+          md:w-96 md:mt-6 lg:absolute lg:bottom-0 lg:right-40
+          object-contain lg:max-w-xl`}
+        />
+
 
         <ul className="order-3 md:order-4 flex items-center gap-8 
         lg:ml-20 lg:absolute lg:bottom-10
