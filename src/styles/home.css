@@ -7,3 +7,8 @@
   top: -40px;
   left: -40px;
 }
+.foto_tripulante {
+  min-height: 60vh;
+  max-height: 75vh;
+  min-width: 60vh;
+}
