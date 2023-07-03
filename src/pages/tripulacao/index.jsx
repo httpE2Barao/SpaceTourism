@@ -131,7 +131,7 @@ const Tripulacao = () => {
           ))}
         </ul>
         <h3 className="order-2 font-main text-cinza 
-          font-semibold uppercase text-lg lg:ml-20 lg:mt-10">
+          font-semibold uppercase text-lg lg:ml-20 lg:mt-8">
           {currentOne}
         </h3>
         {currentOne === 'Comandante' &&

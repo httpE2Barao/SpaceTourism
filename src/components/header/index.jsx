@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import '../../styles/header.css';
 
 const Header = ({ currentPage, onPageChange }) => {
   const [isOpen, setIsOpen] = useState(false);

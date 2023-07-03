@@ -48,7 +48,22 @@ const App = () => {
       <Header currentPage={currentPage} onPageChange={handlePageChange} />
       <PreRenderFirstImage />
       {renderPage()}
-      <PreRenderBackgroundImages />
+      <div
+        className="hidden"
+        style={{ backgroundImage: "url('/images/bg-img-destino.jpg')" }}
+      />
+      <div
+        className="hidden"
+        style={{ backgroundImage: "url('/images/bg-img-destino-mobile.jpg')" }}
+      />
+      <div
+        className="hidden"
+        style={{ backgroundImage: "url('/images/bg-img-tripulacao.jpg')" }}
+      />
+      <div
+        className="hidden"
+        style={{ backgroundImage: "url('/images/bg-img-tripulacao-mobile.jpg')" }}
+      />
     </div>
   );
 };
