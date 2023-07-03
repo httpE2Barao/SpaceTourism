@@ -1,8 +1,23 @@
-import React from 'react';
+import React, { useEffect, useMemo } from 'react';
 
 const DestinoLista = ({ selected, onOrbChange }) => {
-  const orbs = ['Lua', 'Marte', 'Europa', 'Titan'];
+  const orbs = useMemo(() => ['Lua', 'Marte', 'Europa', 'Titan'], []);
 
+  useEffect(() => {
+    // Mapeia os nomes dos orbs para as URLs das imagens correspondentes
+    const orbImages = orbs.map((orb) => `/images/orb_${orb}.svg`);
+
+    // Função para pré-carregar as imagens
+    const preLoadImages = () => {
+      orbImages.forEach((image) => {
+        const img = new Image();
+        img.src = image;
+      });
+    };
+
+    preLoadImages();
+  }, [orbs]);
+  
   return (
     <>
       <ul className='flex uppercase gap-10 text-lg font-semibold tracking-widest md:p-6 md:pb-0 md:mt-7'>

@@ -1,33 +1,88 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 
 const Tripulacao = () => {
   const [currentOne, setCurrentOne] = useState("Comandante");
   const [isAutoSwitchEnabled, setIsAutoSwitchEnabled] = useState(true);
-  const tripulacao = ["Comandante", "Organizador", "Piloto", "Engenheira"];
+  const tripulacao = useMemo(
+    () => ["Comandante", "Organizador", "Piloto", "Engenheira"],
+    []
+  );
+
+  const [preloadedImagesDesktop, setPreloadedImagesDesktop] = useState([]);
+  const [preloadedImagesMobile, setPreloadedImagesMobile] = useState([]);
+  const [isMobile, setIsMobile] = useState(
+    window.matchMedia("(max-width: 767px)").matches
+  );
+
+  useEffect(() => {
+    const preloadImages = async () => {
+      const desktopImages = await Promise.all(
+        tripulacao.map((crew) => {
+          return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.src = `./images/grupo_${crew}.png`;
+            img.onload = resolve;
+            img.onerror = reject;
+          });
+        })
+      );
+
+      setPreloadedImagesDesktop(desktopImages);
+    };
+    const preloadImagesMobile = async () => {
+      const mobileImages = await Promise.all(
+        tripulacao.map((crew) => {
+          return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.src = `./images/grupo_${crew}-mobile.png`;
+            img.onload = resolve;
+            img.onerror = reject;
+          });
+        })
+      );
+
+      setPreloadedImagesMobile(mobileImages);
+    };
+    preloadImages();
+    preloadImagesMobile();
+  }, [tripulacao]);
+
 
   const handleCrewChange = (crew) => {
     setCurrentOne(crew);
-    // Desativar rolagem automática
     setIsAutoSwitchEnabled(false);
   };
 
-    // Rolagem automática
   useEffect(() => {
     let intervalId;
+
     if (isAutoSwitchEnabled) {
       intervalId = setInterval(() => {
-        const currentIndex = tripulacao.indexOf(currentOne);
-        const nextIndex = (currentIndex + 1) % tripulacao.length;
-        setCurrentOne(tripulacao[nextIndex]);
+        setCurrentOne((prevCurrentOne) => {
+          const currentIndex = tripulacao.indexOf(prevCurrentOne);
+          const nextIndex = (currentIndex + 1) % tripulacao.length;
+          return tripulacao[nextIndex];
+        });
       }, 3000);
     }
+
     return () => {
       clearInterval(intervalId);
     };
-  }, [currentOne, isAutoSwitchEnabled, tripulacao]);
+  }, [isAutoSwitchEnabled, tripulacao]);
 
-  // Setter imagens mobile
-  const isMobile = window.matchMedia("(max-width: 767px)").matches;
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setIsMobile(window.matchMedia("(max-width: 767px)").matches);
+    };
+
+    window.addEventListener("resize", handleWindowResize);
+
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
+
   const imageName = isMobile
     ? `grupo_${currentOne}-mobile.png`
     : `grupo_${currentOne}.png`;
