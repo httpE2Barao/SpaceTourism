@@ -21,6 +21,17 @@ body {
   background-attachment: fixed;
   background-position: center;
 }
+
+.preload-images {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+
 /* Mobile */
 @media screen and (max-width: 768px) {
   .bg-image-home {

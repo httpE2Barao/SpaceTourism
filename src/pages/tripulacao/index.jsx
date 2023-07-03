@@ -4,19 +4,14 @@ const Tripulacao = () => {
   const [currentOne, setCurrentOne] = useState("Comandante");
   const [isAutoSwitchEnabled, setIsAutoSwitchEnabled] = useState(true);
   const tripulacao = ["Comandante", "Organizador", "Piloto", "Engenheira"];
-  const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   const handleCrewChange = (crew) => {
     setCurrentOne(crew);
-    // Desativar rolamento automatico
+    // Desativar rolagem automática
     setIsAutoSwitchEnabled(false);
   };
 
-  const handleImageLoad = () => {
-    setIsImageLoaded(true);
-  };
-
-  // Rolamento automatico
+    // Rolagem automática
   useEffect(() => {
     let intervalId;
     if (isAutoSwitchEnabled) {
@@ -31,32 +26,7 @@ const Tripulacao = () => {
     };
   }, [currentOne, isAutoSwitchEnabled, tripulacao]);
 
-  // Pre-renderizar as imagens
-  const preloadImage = (url) => {
-    return new Promise((resolve, reject) => {
-      const image = new Image();
-      image.src = url;
-      image.onload = () => {
-        resolve();
-      };
-      image.onerror = (error) => {
-        reject(error);
-      };
-    });
-  };
-
-  useEffect(() => {
-    setIsImageLoaded(true);
-    preloadImage(`./images/${currentOne}`)
-      .then(() => {
-        setIsImageLoaded(true);
-      })
-      .catch((error) => {
-        console.error("Error preloading image:", error);
-      });
-  }, [currentOne]);
-
-  // Setter das imagens mobile/desktop
+  // Setter imagens mobile
   const isMobile = window.matchMedia("(max-width: 767px)").matches;
   const imageName = isMobile
     ? `grupo_${currentOne}-mobile.png`
@@ -76,18 +46,12 @@ const Tripulacao = () => {
           </h2>
         </div>
 
-        {isImageLoaded ? (
-          <img
-            src={`./images/${imageName}`}
-            alt="Foto dele(a)"
-            className={`${
-              currentOne === "Organizador" ? "img_ajust" : ""
-            } order-1 lg:self-end md:order-5 w-10/12 
+        <img src={`./images/${imageName}`} alt="Foto dele(a)"
+          className={`${currentOne === 'Organizador' ? 'img_ajust' : ''} 
+          order-1 lg:self-end md:order-5 w-10/12 
           md:w-96 md:mt-6 lg:absolute lg:bottom-0 lg:right-40
           object-contain lg:max-w-xl`}
-            onLoad={handleImageLoad}
-          />
-        ): 'Error'}
+        />
 
 
         <ul className="order-3 md:order-4 flex items-center gap-8 
