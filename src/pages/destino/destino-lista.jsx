@@ -6,16 +6,25 @@ const DestinoLista = ({ selected, onOrbChange }) => {
   useEffect(() => {
     // Mapeia os nomes dos orbs para as URLs das imagens correspondentes
     const orbImages = orbs.map((orb) => `/images/orb_${orb}.svg`);
+    const imageInstances = [];
 
     // Função para pré-carregar as imagens
     const preLoadImages = () => {
       orbImages.forEach((image) => {
         const img = new Image();
         img.src = image;
+        imageInstances.push(img);
       });
     };
 
     preLoadImages();
+
+    // Cleanup function
+    return () => {
+      imageInstances.forEach((img) => {
+        img.src = '';
+      });
+    };
   }, [orbs]);
   
   return (
@@ -31,6 +40,7 @@ const DestinoLista = ({ selected, onOrbChange }) => {
           </li>
         ))}
       </ul>
+
       <section className='flex flex-col items-center text-center 
         md:items-start md:p-6 md:gap-4 md:pr-10'>
         {selected === 'Lua' &&

@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Home from './pages/home';
 import Header from './components/header';
 import Destino from './pages/destino';
 import Tripulacao from './pages/tripulacao';
+import PreRenderFirstImage from './pages/tripulacao/pre-render';
+import PreRenderBackgroundImages from './pages/home/pre-render-bg';
 // import Tripulacao from './pages/Tripulacao';
 // import Tecnologia from './pages/Tecnologia';
 
 const App = () => {
-  const [currentPage, setCurrentPage] = useState('');
+  const [currentPage, setCurrentPage] = useState('Home');
 
   const handlePageChange = page => {
     setCurrentPage(page);
@@ -38,15 +40,15 @@ const App = () => {
         return <Tripulacao />;
       // case 'Tecnologia':
       //   return <Tecnologia />;
-      default:
-        return <Home handlePageChange={handlePageChange} />;
     }
   };
 
   return (
     <div className={`App ${getCSSClass()}`}>
       <Header currentPage={currentPage} onPageChange={handlePageChange} />
+      <PreRenderFirstImage />
       {renderPage()}
+      <PreRenderBackgroundImages />
     </div>
   );
 };

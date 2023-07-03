@@ -8,8 +8,8 @@ const Tripulacao = () => {
     []
   );
 
-  const [preloadedImagesDesktop, setPreloadedImagesDesktop] = useState([]);
-  const [preloadedImagesMobile, setPreloadedImagesMobile] = useState([]);
+  const [preloadedImagesDesktop, setPreloadedImagesDesktop] = useState({});
+  const [preloadedImagesMobile, setPreloadedImagesMobile] = useState({});
   const [isMobile, setIsMobile] = useState(
     window.matchMedia("(max-width: 767px)").matches
   );
@@ -21,32 +21,39 @@ const Tripulacao = () => {
           return new Promise((resolve, reject) => {
             const img = new Image();
             img.src = `./images/grupo_${crew}.png`;
-            img.onload = resolve;
+            img.onload = () => {
+              resolve({ [crew]: img });
+            };
             img.onerror = reject;
           });
         })
       );
 
-      setPreloadedImagesDesktop(desktopImages);
+      const desktopImagesMap = Object.assign(...desktopImages);
+      setPreloadedImagesDesktop(desktopImagesMap);
     };
+
     const preloadImagesMobile = async () => {
       const mobileImages = await Promise.all(
         tripulacao.map((crew) => {
           return new Promise((resolve, reject) => {
             const img = new Image();
             img.src = `./images/grupo_${crew}-mobile.png`;
-            img.onload = resolve;
+            img.onload = () => {
+              resolve({ [crew]: img });
+            };
             img.onerror = reject;
           });
         })
       );
 
-      setPreloadedImagesMobile(mobileImages);
+      const mobileImagesMap = Object.assign(...mobileImages);
+      setPreloadedImagesMobile(mobileImagesMap);
     };
+
     preloadImages();
     preloadImagesMobile();
   }, [tripulacao]);
-
 
   const handleCrewChange = (crew) => {
     setCurrentOne(crew);
