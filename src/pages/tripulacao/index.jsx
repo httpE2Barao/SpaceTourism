@@ -116,7 +116,6 @@ const Tripulacao = () => {
           object-contain lg:max-w-xl`}
         />
 
-
         <ul className="order-3 md:order-4 flex items-center gap-8 
         lg:ml-20 lg:absolute lg:bottom-10
         ">
