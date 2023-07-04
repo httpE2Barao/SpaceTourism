@@ -14,6 +14,11 @@ const Tripulacao = () => {
     window.matchMedia("(max-width: 767px)").matches
   );
 
+  const imageName = isMobile
+  ? `grupo_${currentOne}-mobile.png`
+  : `grupo_${currentOne}.png`;
+
+  // Pré renderizador das imagens
   useEffect(() => {
     const preloadImages = async () => {
       const desktopImages = await Promise.all(
@@ -27,12 +32,12 @@ const Tripulacao = () => {
             img.onerror = reject;
           });
         })
-      );
-
-      const desktopImagesMap = Object.assign(...desktopImages);
-      setPreloadedImagesDesktop(desktopImagesMap);
-    };
-
+        );
+        
+        const desktopImagesMap = Object.assign(...desktopImages);
+        setPreloadedImagesDesktop(desktopImagesMap);
+      };
+      
     const preloadImagesMobile = async () => {
       const mobileImages = await Promise.all(
         tripulacao.map((crew) => {
@@ -55,14 +60,15 @@ const Tripulacao = () => {
     preloadImagesMobile();
   }, [tripulacao]);
 
+  // Setter elemento atual
   const handleCrewChange = (crew) => {
     setCurrentOne(crew);
     setIsAutoSwitchEnabled(false);
   };
 
+  // Trocador automatico a cada 3s
   useEffect(() => {
     let intervalId;
-
     if (isAutoSwitchEnabled) {
       intervalId = setInterval(() => {
         setCurrentOne((prevCurrentOne) => {
@@ -78,21 +84,16 @@ const Tripulacao = () => {
     };
   }, [isAutoSwitchEnabled, tripulacao]);
 
+  // Atualizador caso tamanho mude
   useEffect(() => {
     const handleWindowResize = () => {
       setIsMobile(window.matchMedia("(max-width: 767px)").matches);
     };
-
     window.addEventListener("resize", handleWindowResize);
-
     return () => {
       window.removeEventListener("resize", handleWindowResize);
     };
   }, []);
-
-  const imageName = isMobile
-    ? `grupo_${currentOne}-mobile.png`
-    : `grupo_${currentOne}.png`;
 
   return (
     <>

@@ -76,7 +76,7 @@ const Header = ({ currentPage, onPageChange }) => {
             currentPage === 'Tecnologia' ? 'border-r-4 md:border-r-0 md:border-b-4' : ''
           }`}
           onClick={() => {
-            handlePageChange('Tripulação')
+            handlePageChange('Tecnologia')
             toggleMenu()
           }} 
         >

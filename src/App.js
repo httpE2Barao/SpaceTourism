@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Home from './pages/home';
 import Header from './components/header';
 import Destino from './pages/destino';
 import Tripulacao from './pages/tripulacao';
+import Tecnologia from './pages/tecnologia';
 import PreRenderFirstImage from './pages/tripulacao/pre-render';
-import PreRenderBackgroundImages from './pages/home/pre-render-bg';
-// import Tripulacao from './pages/Tripulacao';
-// import Tecnologia from './pages/Tecnologia';
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState('Home');
@@ -38,8 +36,8 @@ const App = () => {
         return <Destino />;
       case 'Tripulação':
         return <Tripulacao />;
-      // case 'Tecnologia':
-      //   return <Tecnologia />;
+      case 'Tecnologia':
+        return <Tecnologia />;
     }
   };
 

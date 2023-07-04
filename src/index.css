@@ -10,6 +10,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+img {
+  max-width: 110%;
+}
+
 .home {
   height: 83vh;
 }
