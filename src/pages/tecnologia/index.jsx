@@ -57,9 +57,21 @@ const Tecnologia = () => {
       ">{currentElement}</h2>
       </div>
 
-      {/* { currentElement === 'Veiculo' && }
-      { currentElement === 'Base' && }
-      { currentElement === 'Capsula' && } */}
+      { currentElement === 'Veiculo' && 
+        <p className="mx-2 mb-8 text-center font-secondary text-lg tracking-wide">
+          Um veículo de lançamento, também conhecido como foguete lançador, é um veículo impulsionado por foguetes utilizado para transportar vocês da superfície da Terra ao espaço. O nosso foguete lançador WEB-X é o mais poderoso em operação. Com impressionantes 150 metros de altura, ele é uma visão de tirar o fôlego quando está na plataforma de lançamento!
+        </p>
+      }
+      { currentElement === 'Base' && 
+        <p className="mx-2 mb-8 text-center font-secondary text-lg tracking-wide">
+          Um porto espacial ou cosmodromo é um local destinado ao lançamento (ou recebimento) de espaçonaves, fazendo uma analogia ao porto marítimo para navios ou ao aeroporto para aeronaves. Situado no famoso Cabo Canaveral, nosso porto espacial está estrategicamente posicionado para aproveitar a rotação da Terra durante os lançamentos.
+        </p>
+      }
+      { currentElement === 'Capsula' && 
+        <p className="mx-2 mb-8 text-center font-secondary text-lg tracking-wide">
+          Uma cápsula espacial é uma espaçonave tripulada que utiliza uma cápsula de reentrada com corpo rombudo para retornar à atmosfera da Terra sem asas. Nossa cápsula é onde você passará o seu tempo durante o voo. Ela inclui uma academia espacial, cinema e diversas outras atividades para mantê-lo entretido.
+        </p>
+      }
 
     </section>
   )
