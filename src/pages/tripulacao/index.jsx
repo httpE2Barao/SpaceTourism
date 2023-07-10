@@ -141,7 +141,7 @@ const Tripulacao = () => {
             ">
               Douglas Hurley
             </h2>
-            <p className="order-3 pb-8 text-lg md:w-9/12 
+            <p className="order-3 pb- text-lg md:w-9/12 
               text-center lg:text-left md:text-xl leading-8 lg:w-1/3 lg:ml-20">
               Douglas Gerald Hurley é um engenheiro americano, ex-piloto do Corpo de Fuzileiros Navais e ex-astronauta da NASA. Ele foi ao espaço pela terceira vez como comandante da missão Demo-2 da Crew Dragon.
             </p>
@@ -154,7 +154,7 @@ const Tripulacao = () => {
             ">
               Mark Shuttleworth
             </h2>
-            <p className="order-3 pb-8 text-lg md:w-9/12 
+            <p className="order-3 pb- text-lg md:w-9/12 
               text-center lg:text-left md:text-xl leading-8 lg:w-1/3 lg:ml-20">
               Mark Richard Shuttleworth é o fundador e CEO da Canonical, a empresa responsável pelo sistema operacional Ubuntu, baseado em Linux. Ele conquistou o feito de se tornar o primeiro sul-africano a viajar para o espaço como turista espacial.
             </p>
@@ -167,7 +167,7 @@ const Tripulacao = () => {
             ">
               Victor Glover
             </h2>
-            <p className="order-3 pb-8 text-lg md:w-9/12 
+            <p className="order-3 pb- text-lg md:w-9/12 
               text-center lg:text-left md:text-xl leading-8 lg:w-1/3 lg:ml-20">
               Victor Glover foi piloto no primeiro voo operacional da SpaceX Crew Dragon para a Estação Espacial Internacional. Além disso, Glover é comandante na Marinha dos Estados Unidos, onde pilota um F/A-18. Ele fez parte da tripulação da Expedição 64 e desempenhou o papel de engenheiro de sistemas de voo da estação.
             </p>
@@ -180,7 +180,7 @@ const Tripulacao = () => {
             ">
               Anousheh Ansari
             </h2>
-            <p className="order-3 pb-8 text-lg md:w-9/12 
+            <p className="order-3 pb- text-lg md:w-9/12 
               text-center lg:text-left md:text-xl leading-8 lg:w-1/3 lg:ml-20">
               Anousheh Ansari é uma engenheira iraniana-americana e co-fundadora da Prodea Systems. Ela foi a quarta turista espacial a financiar sua própria viagem, sendo a primeira mulher a fazê-lo para a Estação Espacial Internacional (ISS) e a primeira iraniana no espaço.
             </p>
