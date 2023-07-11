@@ -98,10 +98,10 @@ const Tripulacao = () => {
       <section className="font-secondary text-branco
        flex flex-col items-center p-4 pb-10 gap-8 
        md:gap-2 md:pb-0
-       lg:items-start
+       lg:items-start 2xl:gap-10
        ">
         <div className="order-0 tracking-widest md:mr-auto md:mt-8 md:ml-8">
-          <h2 className="uppercase text-xl md:mr-auto md:mb-8">
+          <h2 className="uppercase text-xl md:mr-auto md:mb-8 xl:text-3xl">
             <aside className="mr-2 inline text-cinza">02</aside>
             Conheça a Tripulação
           </h2>
@@ -110,12 +110,13 @@ const Tripulacao = () => {
         <img src={`./images/${imageName}`} alt="Foto dele(a)"
           className={`${currentOne === 'Organizador' ? 'img_ajust' : ''} 
           order-1 lg:self-end md:order-5 w-10/12 
-          md:w-96 md:mt-6 lg:absolute lg:bottom-0 lg:right-40
-          object-contain lg:max-w-xl`}
+          md:w-96 md:mt-6 lg:absolute lg:bottom-0 lg:right-20 xl:right-40
+          object-contain lg:max-w-xl 2xl:w-1/2
+          `}
         />
 
         <ul className="order-3 md:order-4 flex items-center gap-8 
-        lg:ml-20 lg:absolute lg:bottom-10
+        lg:ml-20 lg:absolute lg:bottom-10 md:pt-5
         ">
           {tripulacao.map((pessoa, index) => (
             <li
@@ -129,18 +130,22 @@ const Tripulacao = () => {
           ))}
         </ul>
         <h3 className="order-2 font-main text-cinza 
-          font-semibold uppercase text-lg lg:ml-20 lg:mt-8">
+          font-semibold uppercase text-lg
+          lg:ml-20 xl:mt-14 2xl:text-3xl 2xl:pt-10
+          ">
           {currentOne}
         </h3>
         {currentOne === 'Comandante' &&
           <>
             <h2 className="order-3 font-main uppercase text-3xl md:text-5xl
-            lg:ml-20
+            lg:ml-20 2xl:text-7xl
             ">
               Douglas Hurley
             </h2>
             <p className="order-3 pb- text-lg md:w-9/12 
-              text-center lg:text-left md:text-xl leading-8 lg:w-1/3 lg:ml-20">
+              text-center lg:text-left md:text-xl leading-8 
+              lg:w-6/12 lg:ml-20 2xl:text-3xl
+              ">
               Douglas Gerald Hurley é um engenheiro americano, ex-piloto do Corpo de Fuzileiros Navais e ex-astronauta da NASA. Ele foi ao espaço pela terceira vez como comandante da missão Demo-2 da Crew Dragon.
             </p>
           </>
@@ -148,12 +153,14 @@ const Tripulacao = () => {
         {currentOne === 'Organizador' &&
           <>
             <h2 className="order-3 font-main uppercase text-3xl md:text-5xl
-            lg:ml-20
+            lg:ml-20 2xl:text-7xl
             ">
               Mark Shuttleworth
             </h2>
             <p className="order-3 pb- text-lg md:w-9/12 
-              text-center lg:text-left md:text-xl leading-8 lg:w-1/3 lg:ml-20">
+              text-center lg:text-left md:text-xl leading-8 
+              lg:w-6/12 lg:ml-20 2xl:text-3xl
+              ">
               Mark Richard Shuttleworth é o fundador e CEO da Canonical, a empresa responsável pelo sistema operacional Ubuntu, baseado em Linux. Ele conquistou o feito de se tornar o primeiro sul-africano a viajar para o espaço como turista espacial.
             </p>
           </>
@@ -161,12 +168,14 @@ const Tripulacao = () => {
         {currentOne === 'Piloto' &&
           <>
             <h2 className="order-3 font-main uppercase text-3xl md:text-5xl
-            lg:ml-20
+            lg:ml-20 2xl:text-7xl
             ">
               Victor Glover
             </h2>
             <p className="order-3 pb- text-lg md:w-9/12 
-              text-center lg:text-left md:text-xl leading-8 lg:w-1/3 lg:ml-20">
+              text-center lg:text-left md:text-xl leading-8 
+              lg:w-6/12 lg:ml-20 2xl:text-3xl
+              ">
               Victor Glover foi piloto no primeiro voo operacional da SpaceX Crew Dragon para a Estação Espacial Internacional. Além disso, Glover é comandante na Marinha dos Estados Unidos, onde pilota um F/A-18. Ele fez parte da tripulação da Expedição 64 e desempenhou o papel de engenheiro de sistemas de voo da estação.
             </p>
           </>
@@ -174,12 +183,14 @@ const Tripulacao = () => {
         {currentOne === 'Engenheira' &&
           <>
             <h2 className="order-3 font-main uppercase text-3xl md:text-5xl
-            lg:ml-20
+            lg:ml-20 2xl:text-7xl
             ">
               Anousheh Ansari
             </h2>
             <p className="order-3 pb- text-lg md:w-9/12 
-              text-center lg:text-left md:text-xl leading-8 lg:w-1/3 lg:ml-20">
+              text-center lg:text-left md:text-xl leading-8 
+              lg:w-6/12 lg:ml-20 2xl:text-3xl
+              ">
               Anousheh Ansari é uma engenheira iraniana-americana e co-fundadora da Prodea Systems. Ela foi a quarta turista espacial a financiar sua própria viagem, sendo a primeira mulher a fazê-lo para a Estação Espacial Internacional (ISS) e a primeira iraniana no espaço.
             </p>
           </>
