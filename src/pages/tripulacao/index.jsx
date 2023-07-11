@@ -4,9 +4,7 @@ const Tripulacao = () => {
   const [currentOne, setCurrentOne] = useState("Comandante");
   const [isAutoSwitchEnabled, setIsAutoSwitchEnabled] = useState(true);
   const tripulacao = useMemo(
-    () => ["Comandante", "Organizador", "Piloto", "Engenheira"],
-    []
-  );
+    () => ["Comandante", "Organizador", "Piloto", "Engenheira"],[]);
 
   const [preloadedImagesDesktop, setPreloadedImagesDesktop] = useState({});
   const [preloadedImagesMobile, setPreloadedImagesMobile] = useState({});
