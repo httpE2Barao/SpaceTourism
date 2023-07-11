@@ -62,6 +62,10 @@ const App = () => {
         className="hidden"
         style={{ backgroundImage: "url('/images/bg-img-tripulacao-mobile.jpg')" }}
       />
+      <div
+        className="hidden"
+        style={{ backgroundImage: "url('/images/bg-img-tecnologia.jpg')" }}
+      />
     </div>
   );
 };
