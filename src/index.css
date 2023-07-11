@@ -17,6 +17,18 @@ img {
 
 .home {
   height: 83vh;
+  position: relative;
+  z-index: 1;
+}
+
+.botao_hover {
+  z-index: -1;
+  top: -40px;
+  left: -40px;
+}
+
+.img_ajust {
+  max-height: 70vh;
 }
 
 .screen_size {

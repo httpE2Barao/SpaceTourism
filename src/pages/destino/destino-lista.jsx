@@ -30,7 +30,7 @@ const DestinoLista = ({ selected, onOrbChange }) => {
   return (
     <>
       <ul className='flex uppercase gap-10 text-lg font-semibold tracking-widest 
-      md:p-6 md:pb-0 md:mt-7 2xl:text-2xl 2xl:gap-14
+      mb-4 md:p-6 md:pb-0 md:mt-7 2xl:text-2xl 2xl:gap-14
       '>
         {orbs.map((orb, index) => (
           <li

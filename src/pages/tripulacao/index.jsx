@@ -138,7 +138,7 @@ const Tripulacao = () => {
         {currentOne === 'Comandante' &&
           <>
             <h2 className="order-3 font-main uppercase text-3xl md:text-5xl
-            lg:ml-20 2xl:text-7xl
+            lg:ml-20 2xl:text-7xl text-center
             ">
               Douglas Hurley
             </h2>
@@ -153,7 +153,7 @@ const Tripulacao = () => {
         {currentOne === 'Organizador' &&
           <>
             <h2 className="order-3 font-main uppercase text-3xl md:text-5xl
-            lg:ml-20 2xl:text-7xl
+            lg:ml-20 2xl:text-7xl text-center
             ">
               Mark Shuttleworth
             </h2>
@@ -168,7 +168,7 @@ const Tripulacao = () => {
         {currentOne === 'Piloto' &&
           <>
             <h2 className="order-3 font-main uppercase text-3xl md:text-5xl
-            lg:ml-20 2xl:text-7xl
+            lg:ml-20 2xl:text-7xl text-center
             ">
               Victor Glover
             </h2>
@@ -183,7 +183,7 @@ const Tripulacao = () => {
         {currentOne === 'Engenheira' &&
           <>
             <h2 className="order-3 font-main uppercase text-3xl md:text-5xl
-            lg:ml-20 2xl:text-7xl
+            lg:ml-20 2xl:text-7xl text-center
             ">
               Anousheh Ansari
             </h2>
